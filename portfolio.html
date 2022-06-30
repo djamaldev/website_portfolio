@@ -1,0 +1,150 @@
+ <!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Yacine Djamal</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/css_resume.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+              // Add smooth scrolling to all links
+              $("a").on('click', function(event) {
+            
+                // Make sure this.hash has a value before overriding default behavior
+                if (this.hash !== "") {
+                  // Prevent default anchor click behavior
+                  event.preventDefault();
+            
+                  // Store hash
+                  var hash = this.hash;
+            
+                  // Using jQuery's animate() method to add smooth page scroll
+                  // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                  $('html, body').animate({
+                    scrollTop: $(hash).offset().top
+                  }, 800, function(){
+               
+                    // Add hash (#) to URL when done scrolling (default click behavior)
+                    window.location.hash = hash;
+                  });
+                } // End if
+              });
+            });
+            // When the user scrolls down 20px from the top of the document, slide down the navbar
+            var prevScrollpos = window.pageYOffset;
+            window.onscroll = function() {
+            var currentScrollPos = window.pageYOffset;
+            if (prevScrollpos > currentScrollPos) {
+               document.getElementById("navbar").style.top = "0";
+            } else {
+                document.getElementById("navbar").style.top = "-20px";
+            }
+            prevScrollpos = currentScrollPos;
+        }
+
+        $("#slideshow > div:gt(0)").hide();
+
+setInterval(function() {
+  $('#slideshow > div:first')
+    .fadeOut(1000)
+    .next()
+    .fadeIn(1000)
+    .end()
+    .appendTo('#slideshow');
+}, 3000);
+            </script>
+    </head>
+    <body>
+        <div id="topnav">
+            <a class="active" href="#home">Home</a>
+            <a href="#aboutme">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </div>
+        
+        <div class="row">
+            <div class="cardinfo">
+                    <div class="profileimg">
+                        <img src="images/profile.jpg" style="height: 200px;">
+                    </div>
+                    <h2>I'm Yacine Djamal</h2>
+                    <h5>Mobile and web developer</h5>
+                    <h2 id="hstyle">You're welcome</h2>
+                    <h2 id="hstyle">Have a nice day! <span>&#128521</span></h2>
+            </div>
+        </div>
+        <div class="main" id="aboutme">
+            <h2>About Me</h2>
+            <p>I have a solide background in creating complexes mobile applications for android and iPhone
+                <br>
+                I can work independently and respect a deadline.
+                <br>
+                I feel confortable working with a good team of developers.
+                <br>
+                Mobile marketing and adversting experience.
+                <br>
+                Mobile commerce.
+                <br>
+                Mobile wallet.
+                <br>
+                Mobile banking and payments.
+            </p>
+            <h2>Skills</h2>
+            <h5>Programming languages:  
+            </h5>
+            <p>swift (swiftUI, UIKt), objective-c, kotlin, java, c++, flutter & dart, html, css , javaScript.</p>
+            <br>
+            Familiar with most popular operating system: windows, linux, macOS.
+            <br>
+            Familiar with most popular IDE: xCode, Visual Studio, android Studio.
+            <br>
+            I have a solide background about nodejs, mysql, reactjs, bootstrap
+            <br>
+            <h2>Education:</h2>
+            <p>TlemcenUniversity
+              <br>
+              2010
+              Engineer of computer science (Information System)
+              <br>
+              end of studies' project: GENERATION AND DISTRIBUTION OF
+              CRYPTOGRAPHIC KEYS FROM ECG SIGNALS.
+              <br>
+              Certificate of completion 10 total hours of c++ online course on
+              May 2, 2021 (Udemy.com
+              <br>
+              Certificate of completion on 71 total hours of flutter & dart online
+              course on Dec 8, 2021 (Udemy.com)
+            </p>
+            <h2>WORK EXPERIENCE:</h2>
+            <p>
+              CFPA:
+              Techer computer science
+              <br>
+              BET Yacine IT manager:
+              Software developer
+              <br>
+              Province employed:
+                Database management, Network management, Controller, biometric management (National card & Passport),Digital file transfer and Data security
+            </p>
+            <h2>Works:</h2>
+            <p>
+              <a href="https://play.google.com/store/apps/details?id=com.yacinedz.rapelapp">remindMe</a>
+            </p>
+            <div id="slideshow">
+              <div>
+                <img src="images/flutter_01.png">
+              </div>
+              <div>
+                <img src="images/flutter_02.png">
+              </div>
+              <div>
+                <img src="images/flutter_03.png">
+              </div>
+              <div>
+                <img src="images/flutter_04.png">
+              </div>
+            </div>
+        </div>
+    </body>
+</html>
